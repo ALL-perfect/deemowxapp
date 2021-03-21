@@ -1,0 +1,142 @@
+/* pages/mom/mom.wxss */
+.label{
+  position: relative;
+  top: 12px;
+  left: 14px;
+  color: black;
+  font-size: 14px;
+}
+.cell{
+  width: 100%;
+  height: 50px;
+  line-height: 20px;
+}
+.field{
+  position: relative;
+  left: 50px;
+  z-index: 1;
+}
+.alterfield{
+  position: relative;
+  top: 13px;
+  left: 60px;
+  z-index: 1;
+  color: #888888;
+  font-size: 14px;
+}
+.button{
+  position: relative;
+  top: 100px;
+}
+.select_box1{
+  width:20%;
+  height:25px;
+  border-radius: 14rpx;
+  position: relative;
+  left: 100px;
+  top:12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dbdbdb; 
+}
+.select_box1 .select1{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+.select_box1 .select1 .select_text1{
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 28rpx;
+  flex: 1;
+}
+.select_box1 .select1 .select_img1{
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_box1 .select1 .select_img_rotate1{
+  transform:rotate(180deg); 
+}
+.select_box1 .option_box1{
+  z-index: 2;
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  box-sizing: border-box;
+  height: 0px;
+  overflow-y: auto;
+  background: #fff;
+  transition: height 0.3s;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+}
+.select_box1 .option_box1 .option1{
+  display: block;
+  line-height: 30rpx; 
+  font-size: 26rpx;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+.select_box2{
+  width:20%;
+  height:25px;
+  border-radius: 14rpx;
+  position: relative;
+  left: 72px;
+  top:12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dbdbdb; 
+}
+.select_box2 .select2{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+.select_box2 .select2 .select_text2{
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 28rpx;
+  flex: 1;
+}
+.select_box2 .select2 .select_img2{
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_box2 .select2 .select_img_rotate2{
+  transform:rotate(180deg); 
+}
+.select_box2 .option_box2{
+  z-index: 2;
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  box-sizing: border-box;
+  height: 0px;
+  overflow-y: auto;
+  background: #fff;
+  transition: height 0.3s;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+}
+.select_box2 .option_box2 .option2{
+  display: block;
+  line-height: 30rpx; 
+  font-size: 26rpx;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}

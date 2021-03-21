@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "/miniprogram_npm/vant-weapp/cell",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon",
+    "van-button": "/miniprogram_npm/vant-weapp/button",
+    "van-field": "/miniprogram_npm/vant-weapp/field"
+  }
+}

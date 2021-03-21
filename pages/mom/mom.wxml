@@ -1,0 +1,176 @@
+<!--pages/mom/mom.wxml-->
+<view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲姓名</text>
+      </view>
+      <view class="field">
+        <van-field
+        value="{{ name }}"
+        border="{{ false }}"
+        bind:change="changeName"
+        placeholder="请输入姓名"
+        />
+      </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲姓名</text>
+      </view>
+      <view class="alterfield">
+        <text>{{name}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲职业</text>
+      </view>
+      <view class="field">
+        <van-field
+        value="{{ pro }}"
+        border="{{ false }}"
+        bind:change="changePro"
+        placeholder="请输入职业"
+        />
+      </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲职业</text>
+      </view>
+      <view class="alterfield">
+        <text>{{pro}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>备孕期液晶屏每天使用时间</text>
+      </view>  
+      <view class='select_box1'>
+        <view class='select1' catchtap='selectTap1'>
+          <text class='select_text1'>{{selectData1[index1]}}</text>
+          <image class='select_img1 {{selectShow1&&"select_img_rotate1"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box1' style='height:{{selectShow1?(selectData1.length>24?325:selectData1.length*10):0}}rpx;'>
+        <text class='option1' wx:for='{{selectData1}}' wx:key='this' data-index='{{index}}' catchtap='optionTap1'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>备孕期液晶屏每天使用时间</text>
+      </view>
+      <view class="alterfield">
+        <text>{{selectData1[index1]}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class="cell" style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>怀孕期液晶屏每天平均使用时间</text>
+      </view>  
+      <view class='select_box2'>
+        <view class='select2' catchtap='selectTap2'>
+          <text class='select_text2'>{{selectData2[index2]}}</text>
+          <image class='select_img2 {{selectShow2&&"select_img_rotate2"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box2' style='height:{{selectShow2?(selectData2.length>6?325:selectData2.length*50):0}}rpx;'>
+        <text class='option2' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>怀孕期液晶屏每天平均使用时间</text>
+      </view>
+      <view class="alterfield">
+        <text>{{selectData2[index2]}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+    <view class="label">
+      <text>母亲怀孕期情绪状态</text>
+    </view>
+    <view class="field">
+      <van-field
+      value="{{ state1 }}"
+      border="{{ false }}"
+      bind:change="changeState1"
+      placeholder="请输入"
+      />
+    </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲怀孕期情绪状态</text>
+      </view>
+      <view class="alterfield">
+        <text>{{state1}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+    <view class="label">
+      <text>母亲哺乳期情绪状态</text>
+    </view>
+    <view class="field">
+      <van-field
+      value="{{ state2 }}"
+      border="{{ false }}"
+      bind:change="changeState2"
+      placeholder="请输入"
+      />
+    </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母亲哺乳期情绪状态</text>
+      </view>
+      <view class="alterfield">
+        <text>{{state2}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class='cell' style="display: flex;flex-direction: row;">
+    <view class="label">
+      <text>母乳喂养时间</text>
+    </view>
+    <view class="field">
+      <van-field
+      value="{{ time }}"
+      border="{{ false }}"
+      bind:change="changeTime"
+      placeholder="请输入"
+      />
+    </view>
+    </view>
+    <view wx:else class='cell' style="display: flex;flex-direction: row;">
+      <view class="label">
+        <text>母乳喂养时间</text>
+      </view>
+      <view class="alterfield">
+        <text>{{time}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view wx:if="{{alter==0}}" class="button">
+      <van-button type="info" size="large"  bind:click="submit">提交</van-button>
+    </view>
+    <view wx:else>
+      <view class="button">
+        <van-button plain type="info" size="large" bind:click="edit">修改信息</van-button>
+      </view>
+    </view>
+  </view>
+</view>

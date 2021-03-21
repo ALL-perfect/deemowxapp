@@ -1,0 +1,64 @@
+<!--pages/permana/permana.wxml-->
+<view>
+  <view wx:if="{{usrLogin==0}}" class="box" style="display: flex;flex-direction: column;">
+    <van-icon name="user-o" color="blue" size="56px"/>
+    <view class="grey">首次使用请先完成授权认证</view>
+    <van-button round type="info" size="small" open-type="getUserInfo" bindgetuserinfo="getProfile">点击授权</van-button>
+  </view>
+
+  <view wx:else class="box" style="display: flex;flex-direction: column;">
+    <image class="avatar" src='{{profile.avatarUrl}}' ></image>
+    <text>{{profile.nickName}}</text>
+  </view>
+  <text>\n</text>
+  <van-cell-group>
+    <view wx:if="{{usrLogin==0}}">
+      <van-cell 
+      icon="contact" 
+      title="本人信息" 
+      is-link
+      bind:click="showPopup"
+      />
+    </view>
+    <view wx:else>
+      <van-cell 
+      icon="contact" 
+      title="本人信息" 
+      is-link
+      link-type="navigateTo"
+      url="/pages/usrInformation/usrInformation"
+      />
+    </view>
+      <van-cell 
+      icon="contact" 
+      title="就诊人管理" 
+      is-link
+      link-type="navigateTo"
+      url=""
+      />
+      <van-cell 
+      icon="contact" 
+      title="我的预约" 
+      is-link
+      link-type="navigateTo"
+      url=""
+      />      
+      <text>\n</text>
+      <van-cell 
+      icon="contact" 
+      title="意见反馈" 
+      is-link
+      link-type="navigateTo"
+      url="pages/suggestion/suggestion"
+      />
+  </van-cell-group>
+
+  <van-popup
+  show="{{ show }}"
+  closeable
+  duration="300"
+  position="bottom"
+  custom-style="height: 40%"
+  bind:close="onClose"
+><text class="mention">请先授权登录!</text></van-popup>
+</view>

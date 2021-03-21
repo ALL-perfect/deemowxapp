@@ -1,0 +1,72 @@
+/* pages/operation/operation.wxss */
+.activate{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-color: #1E90FF;
+  color: white;
+}
+.deactivate{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.card{
+  position: relative;
+  top: 10px;
+  width: 100%;
+  height: 115px;
+  border: 1px solid rgba(245, 245, 245, 100);
+  box-shadow: darkgrey 5px 5px 10px 3px ;
+}
+.icon{
+  position: relative;
+  left: 16px;
+  top: 16px;
+}
+.docName{
+  position: relative;
+  left: 75px;
+  top: -40px;
+  font-size: 18px;
+}
+.docType{
+  position: relative;
+  left: 90px;
+  top: -40px;
+  font-size: 14px;
+}
+.total{
+  position: relative;
+  left: -30px;
+  top: -10px;
+  font-size: 14px;
+}
+.remain{
+  position: relative;
+  left: 60px;
+  top: -25px;
+  font-size: 18px;
+  color: #1E90FF;
+}
+.button{
+  position: relative;
+  left: 280px;
+  top: -10px;
+}
+.smile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;  
+}
+.none{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-size: 30px;
+  color: #C0C0C0;
+  position: relative;
+  top: 100px;  
+}

@@ -1,0 +1,68 @@
+<!--pages/data/data.wxml-->
+<view>
+  <text>\n</text>
+
+  <van-cell-group>
+    <van-cell 
+      title="家长数据" 
+      />
+      <van-cell 
+      icon="contact" 
+      title="母亲数据" 
+      is-link
+      link-type="navigateTo"
+      url="/pages/mom/mom"
+      />
+      <van-cell 
+      icon="contact" 
+      title="父亲数据" 
+      is-link
+      link-type="navigateTo"
+      url=""
+      />
+  </van-cell-group>
+  
+  <text>\n</text>
+
+  <van-cell-group>
+    <van-cell 
+      title="孩子数据" 
+      />
+      <van-cell 
+      icon="contact" 
+      title="基本数据" 
+      is-link
+      link-type="navigateTo"
+      url=""
+      />
+      <van-cell 
+      icon="contact" 
+      title="来院前数据" 
+      is-link
+      link-type="navigateTo"
+      url=""
+      />
+  </van-cell-group>
+  
+  <text>\n</text>
+
+<van-cell-group>
+  <van-cell 
+    title="治疗过程数据" 
+    />
+    <van-cell 
+    icon="records" 
+    title="首次治疗过程" 
+    is-link
+    link-type="navigateTo"
+    url=""
+    />
+    <van-cell 
+    icon="records" 
+    title="复发治疗过程" 
+    is-link
+    link-type="navigateTo"
+    url=""
+    />
+</van-cell-group>
+</view>

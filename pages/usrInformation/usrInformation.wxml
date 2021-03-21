@@ -1,0 +1,44 @@
+<!--pages/permana/usrInfomation/usrInformation.wxml-->
+<view>
+  <view wx:if="{{flag==0}}">
+    <text class="basicInfo">基本信息</text>
+    <van-cell-group>
+    <van-field
+      label="真实姓名"
+      value="{{ name }}"
+      border="{{ false }}"
+      bind:change="changeName"
+      placeholder="请输入姓名"
+    />
+    <van-field
+      label="手机号"
+      value="{{ phonenum }}"
+      border="{{ false }}"
+      bind:change="changePhone"
+      placeholder="请输入手机号"
+    />
+    </van-cell-group>
+    <view>
+    <van-button type="info" size="large" bind:click="getProfile">确定</van-button>
+    <!-- 测试输入<view>
+      <view wx:if="{{flag==1}}">姓名输入的是-{{name}}-</view>
+      <view wx:else>等待输入</view>
+    </view>
+    <view>
+      <view wx:if="{{flag==1}}">手机号输入的是-{{phonenum}}-</view>
+      <view wx:else>等待输入</view>
+    </view> -->
+    </view>
+  </view>
+  <view wx:else class="cardborder" style="display: flex;flex-direction: column;">
+    <text class="cardname">电子信息卡</text>
+    <text>\n</text>
+    <van-icon name="card" size="80px" color="#1E90FF"/>
+    <view class="cardinfo" style="display: flex;flex-direction: column;">
+      <text>姓名： {{name}}</text>
+      <text>手机号： {{phonenum}}</text>
+    </view>
+    <van-button plain type="info" size="large" bind:click="backTo">修改信息</van-button>
+  </view>
+</view>
+

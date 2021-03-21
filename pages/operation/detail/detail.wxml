@@ -1,0 +1,81 @@
+<!--pages/operation/datail/detail.wxml-->
+<view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">就诊人</text>
+      <text class="name">张三</text>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">诊断眼别</text>
+      <view class='select_box1'>
+        <view class='select1' catchtap='selectTap1'>
+          <text class='select_text1'>{{selectData1[index1]}}</text>
+          <image class='select_img1 {{selectShow1&&"select_img_rotate1"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box1' style='height:{{selectShow1?(selectData1.length>6?325:selectData1.length*50):0}}rpx;'>
+        <text class='option1' wx:for='{{selectData1}}' wx:key='this' data-index='{{index}}' catchtap='optionTap1'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">之前是否做过介入手术</text>
+      <view class='select_box2'>
+        <view class='select2' catchtap='selectTap2'>
+          <text class='select_text2'>{{selectData2[index2]}}</text>
+          <image class='select_img2 {{selectShow2&&"select_img_rotate2"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box2' style='height:{{selectShow2?(selectData2.length>6?325:selectData2.length*50):0}}rpx;'>
+        <text class='option2' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">联合方式</text>
+      <view class='select_box3'>
+        <view class='select3' catchtap='selectTap3'>
+          <text class='select_text3'>{{selectData3[index3]}}</text>
+          <image class='select_img3 {{selectShow3&&"select_img_rotate3"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box3' style='height:{{selectShow3?(selectData3.length>6?325:selectData3.length*50):0}}rpx;'>
+        <text class='option3' wx:for='{{selectData3}}' wx:key='this' data-index='{{index}}' catchtap='optionTap3'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">联系电话</text>
+      <view class="field">
+        <van-field
+        value="{{ phonevalue }}"
+        placeholder="请输入电话号码"
+        order="{{ false }}"
+        bind:change="onChange"
+        />
+      </view>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">预约时间段</text>
+      <view class='select_box4'>
+        <view class='select4' catchtap='selectTap4'>
+          <text class='select_text4'>{{selectData4[index4]}}</text>
+          <image class='select_img4 {{selectShow4&&"select_img_rotate4"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box4' style='height:{{selectShow4?(selectData4.length>6?325:selectData4.length*50):0}}rpx;'>
+        <text class='option4' wx:for='{{selectData4}}' wx:key='this' data-index='{{index}}' catchtap='optionTap4'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="cell" style="display: flex;flex-direction: row;">
+      <text class="cellName">支付方式</text>
+      <view class='select_box5'>
+        <view class='select5' catchtap='selectTap5'>
+          <text class='select_text5'>{{selectData5[index5]}}</text>
+          <image class='select_img5 {{selectShow5&&"select_img_rotate5"}}' src='/miniprogram_npm/vant-weapp/images/arrow.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box5' style='height:{{selectShow5?(selectData5.length>6?325:selectData5.length*50):0}}rpx;'>
+        <text class='option5' wx:for='{{selectData5}}' wx:key='this' data-index='{{index}}' catchtap='optionTap5'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="button">
+      <van-button round clickable type="info" size="normal">确认预约</van-button>
+    </view>
+</view>

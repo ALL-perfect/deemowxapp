@@ -1,0 +1,88 @@
+<!--pages/operation/operation.wxml-->
+<view>
+  <!-- 时间段的选择 -->
+  <van-row>
+    <van-col span="6" >
+      <van-cell wx:if="{{cell1==1}}" clickable bind:click="onCell1">
+        <view class="activate">07/03</view>
+        <view class="activate">周五</view>
+      </van-cell>
+      <van-cell wx:else clickable bind:click="onCell1">
+        <view class="deactivate">07/03</view>
+        <view class="deactivate">周五</view>
+      </van-cell>
+    </van-col>
+    <van-col span="6">
+      <van-cell wx:if="{{cell2==1}}" clickable bind:click="onCell2">
+        <view class="activate">07/04</view>
+        <view class="activate">周六</view>
+      </van-cell>
+      <van-cell wx:else clickable bind:click="onCell2">
+        <view class="deactivate">07/04</view>
+        <view class="deactivate">周六</view>
+      </van-cell>
+    </van-col>
+    <van-col span="6">
+      <van-cell wx:if="{{cell3==1}}" clickable bind:click="onCell3">
+        <view class="activate">07/05</view>
+        <view class="activate">周日</view>
+      </van-cell>
+      <van-cell wx:else clickable bind:click="onCell3">
+        <view class="deactivate">07/05</view>
+        <view class="deactivate">周日</view>
+      </van-cell>
+    </van-col>
+    <van-col span="6">
+      <van-cell wx:if="{{cell4==1}}" clickable bind:click="onCell4">
+        <view class="activate">07/06</view>
+        <view class="activate">周一</view>
+      </van-cell>
+      <van-cell wx:else clickable bind:click="onCell4">
+        <view class="deactivate">07/06</view>
+        <view class="deactivate">周一</view>
+      </van-cell>
+    </van-col>
+  </van-row>
+  <!-- 对于各个时间段显示不同的页面 -->
+  <view wx:if="{{cell1==1}}">
+    <view class="card">
+      <view class="icon">
+        <van-icon name="../images/assignment.svg" size="45px"/>
+      </view>
+      <view>
+        <text class="docName">{{docName}}医生</text>
+        <text class="docType">主治医师</text>
+        <text class="total">总预约量：{{total}}</text>
+        <text class="remain">剩余量：{{remain}}</text>
+      </view>
+      <view class="button">
+        <van-button round type="info" size="small" bind:click="toDetail">预约</van-button>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{cell2==1}}">
+    <view class="smile">
+      <van-icon name="smile-o" size="100px" color="#C0C0C0" />
+    </view>
+    <view class="none">
+      <text>无手术</text>
+    </view>
+  </view>
+  <view wx:elif="{{cell3==1}}">
+    <view class="smile">
+      <van-icon name="smile-o" size="100px" color="#C0C0C0" />
+    </view>
+    <view class="none">
+      <text>无手术</text>
+    </view>
+  </view>
+  <view wx:elif="{{cell4==1}}">
+    <view class="smile">
+      <van-icon name="smile-o" size="100px" color="#C0C0C0" />
+    </view>
+    <view class="none">
+      <text>无手术</text>
+    </view>
+  </view>
+  <view wx:else></view>
+</view>

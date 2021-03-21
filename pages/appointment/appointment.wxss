@@ -1,0 +1,14 @@
+/* pages/appointment/appointment.wxss */
+.h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-size: large;
+}
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 430px;
+}

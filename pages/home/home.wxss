@@ -1,0 +1,41 @@
+/* pages/home/home.wxss */
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.colicon{
+  position: relative;
+  left:-40px;
+}
+.coltext1{
+  position: relative;
+  left: -11px;
+  font-size: 14px;
+  color: #101010;
+}
+.coltext2{
+  position: relative;
+  left: -18px;
+  font-size: 14px;
+  color: #101010;
+}
+.coltext3{
+  position: relative;
+  left: -16px;
+  font-size: 14px;
+  color: #101010;
+}
+.celltext{
+  position: relative;
+  left: 10px;
+  top:-2px;
+  font-size: 16px;
+  color: #101010;
+}
+.page {
+  background-color:#0000
+}

@@ -1,0 +1,9 @@
+<!--pages/appointment/appointment.wxml-->
+<view style="display: flex;flex-direction: column;">
+  <text class="h1">上海新华医院预约须知</text>
+  <text>xxxxxxxxxxxxxxxx</text>
+  <view class="button"> 
+    <van-button type="info" size="normal" bind:click="naviTo">阅读并同意</van-button>
+  </view>
+</view>
+
