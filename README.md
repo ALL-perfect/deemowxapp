@@ -3,7 +3,7 @@
 开发环境：windows下的微信开发者工具，模拟机型使用的是iPhone6
 
 完成情况：完成了设计图中的70%的页面，基本实现了页面中的代码逻辑。具体实现情况可以看图，以下图片均来自真机调试。
-<img src="https://github.com/ALL-perfect/deemowxapp/blob/deemowxapp/pic/pic2.png?raw=true" height="200" width="200" />
+<img src="https://github.com/ALL-perfect/deemowxapp/blob/deemowxapp/pic/pic1.png?raw=true" height="50%" width="50%" />
 ![image](https://github.com/ALL-perfect/deemowxapp/blob/deemowxapp/pic/pic2.png?raw=true)
 ![image](https://github.com/ALL-perfect/deemowxapp/blob/deemowxapp/pic/pic3.png?raw=true)
 ![image](https://github.com/ALL-perfect/deemowxapp/blob/deemowxapp/pic/pic4.png?raw=true)
